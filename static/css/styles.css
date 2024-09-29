@@ -35,6 +35,10 @@ input[type="submit"] {
     font-size: 18px;
 }
 
+input[type="radio"] {
+    margin-right: 5px;
+}
+
 .radio_btn {
     display: inline-flex;
     align-items: baseline;
@@ -58,7 +62,7 @@ button:hover {
 
 div#voiceSpeed {
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 audio {
