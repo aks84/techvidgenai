@@ -1,0 +1,70 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input, select, button {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #086c46;
+    color: azure;
+    font-size: 18px;
+}
+
+.radio_btn {
+    display: inline-flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+    margin-left: 20px;
+}
+
+input#software {
+    width: 96%;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+div#voiceSpeed {
+    display: inline-flex;
+    align-items: center;
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
+p {
+    padding: 10px;
+}

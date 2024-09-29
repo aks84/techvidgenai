@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Installation Guide Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Installation Guide Generator</h1>
+
+        <form id="guideForm">
+            <input type="text" id="software" name="software_name" placeholder="Enter Software Name" required>
+            <select id="osType" name="os_type" required>
+                <option value="" disabled selected>Select OS</option>
+                <option value="macOS">macOS</option>
+                <option value="Windows">Windows</option>
+                <option value="Ubuntu">Ubuntu</option>
+            </select>
+            <input type="submit" value="Generate Script">
+        </form>
+
+        <div id="scriptOutput"></div>
+
+
+        <form id="voiceForm">
+        <label for="language">Select Language:</label>
+        <select id="language" name="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="fr">French</option>
+        </select>
+        <br><br>
+
+        <div id="voiceSpeed">
+            <b>Slow : </b>
+                <div class="radio_btn">
+                <label for="slowTrue">True</label>
+                <input type="radio" id="slowTrue" name="slow" value="True">
+                </div>
+                
+                    <div class="radio_btn">
+                 <label for="slowFalse">False</label>
+                <input type="radio" id="slowFalse" name="slow" value="False" checked>
+                </div>
+               
+        </div>
+        <br><br>
+
+        <input type="submit" value="Generate Voice">
+    </form>
+
+
+<audio controls id="voiceoverAudio">
+  <source src="" type="audio/mpeg">
+</audio>
+
+        
+
+
+<form id="videoForm">
+    <input type="submit" value="Generate Video">
+    <p id="recordingOutput"></p>
+</form>
+
+
+</div>
+
+
+    <script src="{{ url_for('static', filename='js/genscript.js') }}"></script>
+
+</body>
+</html>
