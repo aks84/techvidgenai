@@ -11,13 +11,28 @@
         <h1>AI Installation Guide Generator</h1>
 
         <form id="guideForm">
-            <input type="text" id="software" name="software_name" placeholder="Enter Software Name" required>
-            <select id="osType" name="os_type" required>
+            <input type="text" id="software_name" name="software_name" placeholder="Enter Software Name" required>
+            <select id="scriptosType" name="os_type" required>
                 <option value="" disabled selected>Select OS</option>
-                <option value="macOS">macOS</option>
-                <option value="Windows">Windows</option>
-                <option value="Ubuntu">Ubuntu</option>
+                <option value="macOS 11 Big Sur">macOS 11 Big Sur</option>
+                <option value="macOS 12 Monterey">macOS 12 Monterey</option>
+                <option value="macOS 13 Ventura">macOS 13 Ventura</option>
+                <option value="macOS 14 Sonoma">macOS 14 Sonoma</option>
+                <option value="macOS 15 Seqoua">macOS 15 Seqoua</option>
+                <option value="Windows 11">Windows 11</option>
+                <option value="Windows 10">Windows 10</option>
+                <option value="Windows 7">Windows 7</option>
+                <option value="Ubuntu 24.04 LTS Noble Numbat">Ubuntu 24.04 LTS Noble Numbat</option>
+                <option value="Ubuntu 22.04 LTS Jammy Jellyfish">Ubuntu 22.04 LTS Jammy Jellyfish</option>
+                <option value="Ubuntu 20.04 LTS Focal Fossa">Ubuntu 20.04 LTS Focal Fossa</option>
             </select>
+        <select id="scriptlanguage" name="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="fr">French</option>
+        </select>
+
             <input type="submit" value="Generate Script">
         </form>
 
@@ -26,7 +41,7 @@
 
         <form id="voiceForm">
         <label for="language">Select Language:</label>
-        <select id="language" name="language">
+        <select id="voicelanguage" name="language">
             <option value="en">English</option>
             <option value="es">Spanish</option>
             <option value="de">German</option>
@@ -61,9 +76,17 @@
 
 
 <form id="videoForm">
-    <input type="submit" value="Generate Video">
-    <p id="recordingOutput"></p>
+    <label for="videoosType">Select your OS:</label>
+    <select id="videoosType">
+        <option value="Windows">Windows</option>
+        <option value="macOS">macOS</option>
+        <option value="Ubuntu">Ubuntu</option>
+    </select>
+    <button type="submit">Start Recording</button>
 </form>
+
+<div id="recordingOutput"></div>
+
 
 
 </div>

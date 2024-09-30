@@ -1,0 +1,31 @@
+How to Install Python 3.12 on macOS Step by Step Guide - October 5, 2023
+
+Step 1: Open Terminal
+Press Command + Space to open Spotlight Search, type Terminal, and press Enter to open the Terminal application.
+
+Step 2: Update Homebrew
+Make sure you have Homebrew installed. If you don’t have it, you can install it by running the following command:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Once Homebrew is installed, update it by running:
+brew update
+
+Step 3: Install Python 3.12
+Install Python 3.12 by executing the following command in the Terminal:
+brew install python@3.12
+
+Step 4: Verify Installation
+After the installation is complete, verify that Python 3.12 has been installed correctly by checking the version:
+python3.12 --version
+You should see the output displaying the installed Python version.
+
+Step 5: Set Up the PATH (Optional)
+If you want to use python3 command instead of python3.12, you may need to add the symlink to your PATH. Run:
+echo 'export PATH="/usr/local/opt/python@3.12/bin:$PATH"' &gt;&gt; ~/.zprofile
+Then, refresh your profile by running:
+source ~/.zprofile
+
+Step 6: Install pip (If Not Already Installed)
+Pip is typically included with the Python installation, but you can ensure it is installed by running:
+python3.12 -m ensurepip --upgrade
+
+Step 7: Install Python Packages (Optional
